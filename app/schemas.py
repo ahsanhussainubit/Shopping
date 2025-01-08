@@ -3,11 +3,15 @@ from pydantic import BaseModel
 class User(BaseModel):
     name: str
     email: str
-    password: str
 
     class Config:
         orm_mode = True
         from_attributes = True
+
+class CreateUser(BaseModel):
+    name: str
+    email: str
+    password: str
 
 class ShowUser(User):
     id: int
@@ -29,7 +33,6 @@ class ShowProduct(Product):
     id: int
 
 class OrderCreate(BaseModel):
-    user_id: int
     status: str = "Pending"
     product_ids: list[int] = []
 
@@ -45,3 +48,12 @@ class Order(BaseModel):
 
 class ShowOrder(Order):
     id: int
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+
+class TokenData(BaseModel):
+    username: str | None = None

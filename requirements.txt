@@ -7,3 +7,5 @@ alembic
 aiosqlite
 nest_asyncio
 aiomysql
+python-jose
+python-multipart

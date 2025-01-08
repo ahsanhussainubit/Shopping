@@ -1,4 +1,4 @@
-from ..schemas import User,ShowUser
+from ..schemas import CreateUser,ShowUser
 from app.database import get_db
 from app.hashing import Hash
 from app import models
@@ -6,7 +6,7 @@ from fastapi import Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 
-async def create(user: User, db: AsyncSession = Depends(get_db)):
+async def create(user: CreateUser, db: AsyncSession = Depends(get_db)):
     new_user = models.User(name=user.name, email=user.email, password=Hash.becrypt(user.password))
     db.add(new_user)
     await db.commit()
