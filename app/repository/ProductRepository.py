@@ -1,8 +1,8 @@
-from ..schemas import ProductCreate,ShowProduct
+from ..model.schemas import ProductCreate,ShowProduct
 from ..database import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import Depends, HTTPException, status
-from .. import models
+from ..model import models
 from sqlalchemy import select
 
 async def get_product_by_id(product_id:int,db: AsyncSession = Depends(get_db)):

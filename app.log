@@ -1,0 +1,110 @@
+2025-01-08 17:36:33,738 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:36:33,739 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:36:33,739 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:36:33,742 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:36:33,743 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:36:33,746 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:36:33,746 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:36:33,749 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:36:33,750 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:36:33,754 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 17:36:53,236 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0009398460388183594}
+2025-01-08 17:36:53,426 - root - INFO - Rate limit exceeded for 127.0.0.1
+2025-01-08 17:36:56,242 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0003018379211425781}
+2025-01-08 17:36:56,315 - root - INFO - Rate limit exceeded for 127.0.0.1
+2025-01-08 17:38:06,155 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:38:06,157 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:38:06,157 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:06,160 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:38:06,161 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:06,163 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:38:06,164 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:06,166 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:38:06,167 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:06,171 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 17:38:08,369 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0003368854522705078}
+2025-01-08 17:38:08,445 - root - INFO - Rate limit exceeded for 127.0.0.1
+2025-01-08 17:38:29,653 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:38:29,654 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:38:29,654 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:29,658 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:38:29,658 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:29,661 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:38:29,662 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:29,664 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:38:29,665 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:29,667 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 17:38:35,921 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:38:35,922 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:38:35,922 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:35,925 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:38:35,926 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:35,928 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:38:35,929 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:35,931 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:38:35,932 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:35,934 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 17:38:40,660 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:38:40,661 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:38:40,662 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:40,665 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:38:40,666 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:40,669 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:38:40,670 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:40,672 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:38:40,673 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:40,675 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 17:38:41,800 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:38:41,801 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:38:41,802 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:41,805 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:38:41,806 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:41,808 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:38:41,809 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:41,812 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:38:41,813 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:38:41,815 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 17:38:44,890 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0005092620849609375}
+2025-01-08 17:38:44,973 - root - INFO - Rate limit exceeded for 127.0.0.1
+2025-01-08 17:38:59,565 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0006909370422363281}
+2025-01-08 17:38:59,644 - root - INFO - Rate limit exceeded for 127.0.0.1
+2025-01-08 17:39:01,262 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:39:01,263 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:39:01,264 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:39:01,267 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:39:01,268 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:39:01,271 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:39:01,271 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:39:01,273 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:39:01,273 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:39:01,276 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 17:39:01,288 - root - INFO - Rate limit exceeded for 127.0.0.1
+2025-01-08 17:39:01,290 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.002921581268310547}
+2025-01-08 17:39:01,291 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0017046928405761719}
+2025-01-08 17:39:01,392 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.009516477584838867}
+2025-01-08 17:39:12,549 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:39:12,550 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:39:12,550 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:39:12,554 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:39:12,555 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:39:12,557 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:39:12,557 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:39:12,559 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:39:12,560 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:39:12,563 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 17:39:13,028 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0003447532653808594}
+2025-01-08 17:39:13,115 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.008355855941772461}
+2025-01-08 17:39:24,132 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:39:24,134 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:39:24,134 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:39:24,137 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:39:24,138 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:39:24,140 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:39:24,141 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:39:24,142 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:39:24,143 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:39:24,145 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 17:39:26,241 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0003802776336669922}
+2025-01-08 17:39:26,327 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.008901596069335938}
+2025-01-08 17:39:26,872 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0002923011779785156}
+2025-01-08 17:39:26,940 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.00040602684020996094}

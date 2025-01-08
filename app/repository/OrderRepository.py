@@ -1,8 +1,8 @@
-from ..schemas import OrderCreate,ShowOrder
+from ..model.schemas import OrderCreate,ShowOrder
 from ..database import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import Depends, HTTPException, status
-from .. import models
+from ..model import models
 from sqlalchemy import select
 from sqlalchemy.orm import joinedload
 

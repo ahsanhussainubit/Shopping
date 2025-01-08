@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends
 from ..repository import OrderRepository
 from sqlalchemy.ext.asyncio import AsyncSession
 from ..database import get_db
-from ..schemas import OrderCreate, ShowUser
-from ..oauth2 import get_current_user
+from ..model.schemas import OrderCreate, ShowUser
+from ..auth.oauth2 import get_current_user
 
 router = APIRouter(
     prefix="/orders",

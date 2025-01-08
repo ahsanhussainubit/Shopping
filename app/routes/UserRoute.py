@@ -3,8 +3,8 @@ from ..repository import UserRepository
 from sqlalchemy.ext.asyncio import AsyncSession
 from ..database import get_db
 from fastapi import Depends
-from ..schemas import CreateUser,ShowUser
-from ..oauth2 import get_current_user
+from ..model.schemas import CreateUser,ShowUser
+from ..auth.oauth2 import get_current_user
 
 router = APIRouter(prefix="/users",tags=["users"])
 

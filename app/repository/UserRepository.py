@@ -1,7 +1,7 @@
-from ..schemas import CreateUser,ShowUser
+from ..model.schemas import CreateUser,ShowUser
 from app.database import get_db
-from app.hashing import Hash
-from app import models
+from app.auth.hashing import Hash
+from app.model import models
 from fastapi import Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select

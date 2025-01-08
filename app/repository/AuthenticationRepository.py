@@ -1,7 +1,9 @@
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
-from ..hashing import Hash
-from .. import models, token
+
+from ..auth import token
+from ..auth.hashing import Hash
+from ..model import models
 from ..database import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select

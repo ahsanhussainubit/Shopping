@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordRequestForm
 from ..repository import AuthenticationRepository
-from .. import schemas
+from ..model import schemas
 from ..database import get_db
 
 
