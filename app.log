@@ -138,3 +138,13 @@
 2025-01-08 17:40:18,870 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
 2025-01-08 17:40:18,870 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
 2025-01-08 17:40:18,873 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 17:40:21,864 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:40:21,865 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:40:21,865 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:21,867 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:40:21,868 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:21,870 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:40:21,870 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:21,872 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:40:21,873 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:21,875 - sqlalchemy.engine.Engine - INFO - COMMIT
