@@ -9,3 +9,4 @@ nest_asyncio
 aiomysql
 python-jose
 python-multipart
+python-dotenv
