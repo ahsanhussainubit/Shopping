@@ -108,3 +108,33 @@
 2025-01-08 17:39:26,327 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.008901596069335938}
 2025-01-08 17:39:26,872 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0002923011779785156}
 2025-01-08 17:39:26,940 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.00040602684020996094}
+2025-01-08 17:40:15,376 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:40:15,377 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:40:15,377 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:15,380 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:40:15,380 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:15,382 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:40:15,383 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:15,386 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:40:15,387 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:15,389 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 17:40:17,352 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:40:17,353 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:40:17,354 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:17,356 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:40:17,357 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:17,359 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:40:17,360 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:17,362 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:40:17,363 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:17,365 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 17:40:18,860 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 17:40:18,861 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 17:40:18,861 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:18,864 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 17:40:18,865 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:18,866 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 17:40:18,867 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:18,870 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 17:40:18,870 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 17:40:18,873 - sqlalchemy.engine.Engine - INFO - COMMIT

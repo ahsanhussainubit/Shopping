@@ -27,7 +27,7 @@ from typing import Dict
 period = 1 #sec
 period_count = 1000 #count
 
-period_time = period / period_count # it means 10 request per second
+period_time = period / period_count # it means ${period_count} request per second
 
 class AdvancedMiddleware(BaseHTTPMiddleware):
     def __init__(self, app, dispatch = None):
