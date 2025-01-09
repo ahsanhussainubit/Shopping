@@ -1,6 +1,7 @@
 import asyncio
-from fastapi import FastAPI
-from app.routes import OrderRoute, AuthenticationRoute, UserRoute, ProductRoute
+from fastapi import FastAPI, Path
+from fastapi.staticfiles import StaticFiles
+from app.routes import OrderRoute, AuthenticationRoute, UserRoute, ProductRoute,StaticRoute
 from app.database import engine
 from app.model.models import Base
 from app.model import models
@@ -14,6 +15,7 @@ app.include_router(UserRoute.router)
 app.include_router(OrderRoute.router)
 app.include_router(ProductRoute.router)
 app.add_middleware(AdvancedMiddleware)
+app.include_router(StaticRoute.router)
 
 # models.Base.metadata.create_all(bind=engine)
 
