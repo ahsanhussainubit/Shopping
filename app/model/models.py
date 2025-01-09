@@ -31,10 +31,16 @@ class Product(Base):
     name = Column(String, nullable=False)
     description = Column(String, nullable=True)
     price = Column(Float, nullable=False)
+
+    category_id = Column(Integer, ForeignKey('categories.id'), nullable=True)
+    category = relationship("Category", back_populates="products")
+
+    
     
     # Many-to-Many relationship with orders
     orders = relationship("Order",secondary=order_product_association,back_populates="products")
 
+    
 
 
 class Order(Base):
@@ -50,3 +56,11 @@ class Order(Base):
     # Many-to-Many relationship with products
     products = relationship("Product",secondary=order_product_association,back_populates="orders")
 
+class Category(Base):
+    __tablename__ = 'categories'
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False)
+    description = Column(String, nullable=True)
+
+    # Relationship with products
+    products = relationship("Product", back_populates="category")

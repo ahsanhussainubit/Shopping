@@ -27,9 +27,27 @@ class Product(BaseModel):
         from_attributes = True  
 
 class ProductCreate(Product):
+    category_id: int
     pass
 
 class ShowProduct(Product):
+    id: int
+    category: "ShowCategory"
+
+
+
+
+class Category(BaseModel):
+    name: str
+
+    class Config:
+        orm_mode = True  # Tells Pydantic to read data as an ORM model (SQLAlchemy)
+        from_attributes = True  
+
+class CategoryCreate(Category):
+    pass
+
+class ShowCategory(Category):
     id: int
 
 class OrderCreate(BaseModel):
