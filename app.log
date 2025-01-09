@@ -789,3 +789,1084 @@ Traceback (most recent call last):
 AttributeError: module 'bcrypt' has no attribute '__about__'
 2025-01-08 18:10:08,766 - sqlalchemy.engine.Engine - INFO - ROLLBACK
 2025-01-08 18:10:08,768 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.2530989646911621}
+2025-01-08 19:48:11,920 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:48:11,921 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:48:11,922 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:48:11,929 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:48:11,930 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:48:11,933 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:48:11,934 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:48:11,938 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:48:11,939 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:48:11,942 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:48:12,089 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0006639957427978516}
+2025-01-08 19:48:12,301 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.013631582260131836}
+2025-01-08 19:48:26,543 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:48:26,554 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-08 19:48:26,557 - sqlalchemy.engine.Engine - INFO - [generated in 0.00286s] ('string',)
+2025-01-08 19:48:26,611 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\FastApi Projects\Shopping\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-08 19:48:27,010 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-08 19:48:27,014 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.4797806739807129}
+2025-01-08 19:48:37,398 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.002068042755126953}
+2025-01-08 19:48:47,303 - root - INFO - {'url': URL('http://127.0.0.1:8000/users?user_id=1'), 'method': 'GET', 'process_time': 0.0019135475158691406}
+2025-01-08 19:49:15,648 - root - INFO - {'url': URL('http://127.0.0.1:8000/users?user_id=1'), 'method': 'GET', 'process_time': 0.001416921615600586}
+2025-01-08 19:49:23,261 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.0014185905456542969}
+2025-01-08 19:49:34,848 - root - INFO - {'url': URL('http://127.0.0.1:8000/orders/user/'), 'method': 'GET', 'process_time': 0.0011794567108154297}
+2025-01-08 19:49:55,753 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:49:55,755 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:49:55,755 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:49:55,759 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:49:55,760 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:49:55,763 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:49:55,764 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:49:55,767 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:49:55,768 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:49:55,771 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:49:57,650 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:49:57,651 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:49:57,652 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:49:57,654 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:49:57,655 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:49:57,658 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:49:57,659 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:49:57,661 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:49:57,662 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:49:57,664 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:50:00,136 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:50:00,137 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:50:00,138 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:50:00,140 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:50:00,141 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:50:00,144 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:50:00,145 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:50:00,147 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:50:00,148 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:50:00,151 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:50:02,213 - root - INFO - {'url': URL('http://127.0.0.1:8000/orders/user/'), 'method': 'GET', 'process_time': 0.001991748809814453}
+2025-01-08 19:50:03,832 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0006558895111083984}
+2025-01-08 19:50:04,025 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.017739295959472656}
+2025-01-08 19:50:09,409 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:50:09,426 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-08 19:50:09,428 - sqlalchemy.engine.Engine - INFO - [generated in 0.00265s] ('string',)
+2025-01-08 19:50:09,441 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\FastApi Projects\Shopping\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-08 19:50:09,830 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-08 19:50:09,834 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.4324641227722168}
+2025-01-08 19:50:11,485 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0004558563232421875}
+2025-01-08 19:50:11,629 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.0011928081512451172}
+2025-01-08 19:50:19,217 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:50:19,218 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-08 19:50:19,221 - sqlalchemy.engine.Engine - INFO - [cached since 9.795s ago] ('string',)
+2025-01-08 19:50:19,571 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-08 19:50:19,574 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.36379098892211914}
+2025-01-08 19:50:29,380 - root - INFO - {'url': URL('http://127.0.0.1:8000/orders/user/'), 'method': 'GET', 'process_time': 0.0016474723815917969}
+2025-01-08 19:50:43,825 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:50:43,826 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:50:43,827 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:50:43,830 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:50:43,831 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:50:43,833 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:50:43,834 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:50:43,837 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:50:43,838 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:50:43,840 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:50:46,725 - root - INFO - {'url': URL('http://127.0.0.1:8000/orders/user/'), 'method': 'GET', 'process_time': 0.001734018325805664}
+2025-01-08 19:51:04,343 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:51:04,344 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:51:04,345 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:51:04,348 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:51:04,349 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:51:04,352 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:51:04,352 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:51:04,355 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:51:04,356 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:51:04,359 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:51:08,290 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:51:08,292 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:51:08,292 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:51:08,296 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:51:08,296 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:51:08,299 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:51:08,300 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:51:08,302 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:51:08,303 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:51:08,306 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:51:08,320 - root - INFO - {'url': URL('http://127.0.0.1:8000/orders/user/'), 'method': 'GET', 'process_time': 0.0014195442199707031}
+2025-01-08 19:51:17,668 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.000568389892578125}
+2025-01-08 19:51:17,860 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.018826961517333984}
+2025-01-08 19:51:27,106 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:51:27,123 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-08 19:51:27,125 - sqlalchemy.engine.Engine - INFO - [generated in 0.00229s] ('string',)
+2025-01-08 19:51:27,136 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\FastApi Projects\Shopping\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-08 19:51:27,528 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-08 19:51:27,531 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.432481050491333}
+2025-01-08 19:51:55,007 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.0013091564178466797}
+2025-01-08 19:52:10,906 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:52:10,907 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:52:10,908 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:10,912 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:52:10,913 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:10,916 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:52:10,916 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:10,918 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:52:10,919 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:10,922 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:52:14,050 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:52:14,051 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:52:14,052 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:14,055 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:52:14,056 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:14,059 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:52:14,060 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:14,062 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:52:14,062 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:14,064 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:52:15,570 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:52:15,571 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:52:15,571 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:15,573 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:52:15,574 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:15,576 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:52:15,576 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:15,579 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:52:15,580 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:15,582 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:52:18,288 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.0015897750854492188}
+2025-01-08 19:52:34,331 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.0011494159698486328}
+2025-01-08 19:52:41,576 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:52:41,577 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:52:41,578 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:41,582 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:52:41,583 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:41,585 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:52:41,586 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:41,589 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:52:41,590 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:52:41,593 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:52:43,924 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.003232717514038086}
+2025-01-08 19:53:26,757 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:53:26,758 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:53:26,758 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:53:26,761 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:53:26,761 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:53:26,764 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:53:26,765 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:53:26,767 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:53:26,768 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:53:26,771 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:53:30,470 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:53:30,471 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:53:30,471 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:53:30,474 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:53:30,475 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:53:30,479 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:53:30,479 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:53:30,482 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:53:30,482 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:53:30,485 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:53:30,496 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.0018420219421386719}
+2025-01-08 19:53:42,135 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:53:42,136 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:53:42,137 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:53:42,140 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:53:42,141 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:53:42,144 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:53:42,145 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:53:42,148 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:53:42,149 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:53:42,153 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:53:42,168 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.0024819374084472656}
+2025-01-08 19:54:15,041 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:54:15,042 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:54:15,043 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:15,046 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:54:15,047 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:15,050 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:54:15,050 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:15,053 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:54:15,054 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:15,057 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:54:16,851 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:54:16,852 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:54:16,852 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:16,856 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:54:16,856 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:16,859 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:54:16,859 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:16,861 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:54:16,862 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:16,865 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:54:16,876 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.002207517623901367}
+2025-01-08 19:54:30,067 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:54:30,069 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:54:30,070 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:30,073 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:54:30,075 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:30,078 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:54:30,079 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:30,082 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:54:30,083 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:30,087 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:54:32,020 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:54:32,021 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:54:32,022 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:32,025 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:54:32,025 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:32,028 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:54:32,029 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:32,031 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:54:32,032 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:32,034 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:54:33,481 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:54:33,482 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:54:33,483 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:33,485 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:54:33,486 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:33,489 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:54:33,489 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:33,492 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:54:33,493 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:54:33,495 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:54:35,029 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.002582073211669922}
+2025-01-08 19:55:02,036 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:55:02,037 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:55:02,037 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:02,039 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:55:02,040 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:02,041 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:55:02,042 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:02,044 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:55:02,045 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:02,047 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:55:04,244 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.0038754940032958984}
+2025-01-08 19:55:14,766 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:55:14,767 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:55:14,768 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:14,772 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:55:14,772 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:14,775 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:55:14,776 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:14,779 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:55:14,779 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:14,782 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:55:16,358 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:55:16,360 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:55:16,360 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:16,364 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:55:16,365 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:16,369 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:55:16,370 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:16,373 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:55:16,374 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:16,376 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:55:30,853 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:55:30,854 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:55:30,855 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:30,858 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:55:30,859 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:30,861 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:55:30,862 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:30,865 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:55:30,866 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:30,869 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:55:35,679 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:55:35,680 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:55:35,681 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:35,684 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:55:35,685 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:35,689 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:55:35,689 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:35,693 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:55:35,694 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:35,697 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:55:37,598 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:55:37,600 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:55:37,600 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:37,604 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:55:37,605 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:37,608 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:55:37,609 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:37,611 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:55:37,611 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:37,614 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:55:39,969 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:55:39,970 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:55:39,971 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:39,973 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:55:39,974 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:39,976 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:55:39,977 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:39,979 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:55:39,979 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:39,981 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:55:40,116 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.002367734909057617}
+2025-01-08 19:55:49,626 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:55:49,627 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:55:49,628 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:49,631 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:55:49,632 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:49,634 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:55:49,635 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:49,638 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:55:49,639 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:49,642 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:55:51,557 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:55:51,558 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:55:51,559 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:51,562 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:55:51,563 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:51,572 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:55:51,573 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:51,577 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:55:51,578 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:55:51,581 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:55:51,597 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:55:51,608 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id = ?
+2025-01-08 19:55:51,610 - sqlalchemy.engine.Engine - INFO - [generated in 0.00195s] (TokenData(user_id=None),)
+2025-01-08 19:55:51,614 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-08 19:56:09,255 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:56:09,256 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:56:09,257 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:56:09,263 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:56:09,266 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:56:09,270 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:56:09,271 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:56:09,274 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:56:09,275 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:56:09,291 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:56:11,672 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:56:11,674 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:56:11,675 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:56:11,679 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:56:11,681 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:56:11,686 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:56:11,687 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:56:11,690 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:56:11,691 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:56:11,695 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:56:12,896 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:56:12,907 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id = ?
+2025-01-08 19:56:12,909 - sqlalchemy.engine.Engine - INFO - [generated in 0.00155s] (TokenData(user_id=1),)
+2025-01-08 19:56:12,911 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-08 19:56:22,710 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:56:22,711 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:56:22,712 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:56:22,716 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:56:22,717 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:56:22,719 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:56:22,720 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:56:22,722 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:56:22,723 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:56:22,726 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:56:22,745 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:56:22,760 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id = ?
+2025-01-08 19:56:22,762 - sqlalchemy.engine.Engine - INFO - [generated in 0.00190s] (TokenData(user_id=1),)
+2025-01-08 19:56:22,766 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-08 19:57:02,739 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:57:02,740 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:57:02,741 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:57:02,744 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:57:02,745 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:57:02,749 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:57:02,751 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:57:02,755 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:57:02,755 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:57:02,758 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:57:04,660 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:57:04,661 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:57:04,661 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:57:04,664 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:57:04,665 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:57:04,667 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:57:04,668 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:57:04,671 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:57:04,672 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:57:04,675 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:57:06,436 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:57:06,453 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id IS NULL
+2025-01-08 19:57:06,455 - sqlalchemy.engine.Engine - INFO - [generated in 0.00148s] ()
+2025-01-08 19:57:06,458 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-08 19:57:06,461 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.030237913131713867}
+2025-01-08 19:57:25,997 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-08 19:57:25,998 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-08 19:57:25,998 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:57:26,001 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-08 19:57:26,002 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:57:26,004 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-08 19:57:26,005 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:57:26,007 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-08 19:57:26,008 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-08 19:57:26,010 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-08 19:57:26,684 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.001905202865600586}
+2025-01-09 11:56:30,507 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:56:30,509 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:56:30,509 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:56:30,515 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:56:30,516 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:56:30,519 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:56:30,520 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:56:30,523 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:56:30,524 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:56:30,527 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:56:32,790 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0011112689971923828}
+2025-01-09 11:56:33,057 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.015276432037353516}
+2025-01-09 11:56:40,223 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:56:40,236 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 11:56:40,238 - sqlalchemy.engine.Engine - INFO - [generated in 0.00215s] ('string',)
+2025-01-09 11:56:40,328 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\FastApi Projects\Shopping\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 11:56:40,724 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 11:56:40,727 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.5095667839050293}
+2025-01-09 11:56:47,960 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.004024505615234375}
+2025-01-09 11:57:23,503 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:57:23,504 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:57:23,505 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:23,508 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:57:23,509 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:23,512 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:57:23,513 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:23,516 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:57:23,517 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:23,520 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:57:27,793 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:57:27,794 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:57:27,795 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:27,799 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:57:27,800 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:27,803 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:57:27,803 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:27,807 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:57:27,808 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:27,812 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:57:31,783 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:57:31,784 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:57:31,785 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:31,788 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:57:31,789 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:31,791 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:57:31,792 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:31,794 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:57:31,795 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:31,798 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:57:34,943 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:57:34,944 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:57:34,944 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:34,948 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:57:34,948 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:34,951 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:57:34,952 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:34,955 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:57:34,956 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:57:34,959 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:57:47,045 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:57:47,056 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 11:57:47,059 - sqlalchemy.engine.Engine - INFO - [generated in 0.00241s] ('string',)
+2025-01-09 11:57:47,064 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 11:58:00,655 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:58:00,656 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:58:00,657 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:00,660 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:58:00,661 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:00,665 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:58:00,666 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:00,670 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:58:00,671 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:00,675 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:58:00,695 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:58:00,709 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 11:58:00,712 - sqlalchemy.engine.Engine - INFO - [generated in 0.00257s] ('string',)
+2025-01-09 11:58:00,718 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 11:58:13,170 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:58:13,171 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:58:13,172 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:13,175 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:58:13,176 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:13,179 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:58:13,180 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:13,183 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:58:13,184 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:13,187 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:58:15,157 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:58:15,171 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 11:58:15,172 - sqlalchemy.engine.Engine - INFO - [generated in 0.00182s] ('string',)
+2025-01-09 11:58:15,176 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 11:58:29,218 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:58:29,219 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:58:29,220 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:29,223 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:58:29,224 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:29,227 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:58:29,228 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:29,230 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:58:29,231 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:29,233 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:58:29,606 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:58:29,619 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 11:58:29,620 - sqlalchemy.engine.Engine - INFO - [generated in 0.00139s] ('string',)
+2025-01-09 11:58:29,625 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 11:58:32,851 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:58:32,853 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 11:58:32,857 - sqlalchemy.engine.Engine - INFO - [cached since 3.238s ago] ('string',)
+2025-01-09 11:58:32,863 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 11:58:41,225 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:58:41,226 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:58:41,227 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:41,231 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:58:41,232 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:41,235 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:58:41,236 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:41,239 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:58:41,240 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:41,243 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:58:49,477 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:58:49,478 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:58:49,479 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:49,482 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:58:49,483 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:49,486 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:58:49,487 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:49,490 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:58:49,491 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:58:49,494 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:59:03,637 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:59:03,638 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:59:03,639 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:59:03,643 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:59:03,644 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:59:03,647 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:59:03,648 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:59:03,650 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:59:03,651 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:59:03,653 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:59:03,667 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:59:03,681 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 11:59:03,683 - sqlalchemy.engine.Engine - INFO - [generated in 0.00157s] ('string',)
+2025-01-09 11:59:03,690 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\FastApi Projects\Shopping\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 11:59:03,981 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 11:59:03,983 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.3215000629425049}
+2025-01-09 11:59:41,692 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:59:41,693 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:59:41,693 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:59:41,696 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:59:41,697 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:59:41,700 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:59:41,701 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:59:41,704 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:59:41,705 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:59:41,708 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:59:45,343 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:59:45,344 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 11:59:45,345 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:59:45,348 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 11:59:45,349 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:59:45,352 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 11:59:45,353 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:59:45,356 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 11:59:45,357 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 11:59:45,361 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 11:59:46,213 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0006403923034667969}
+2025-01-09 11:59:46,384 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.009992122650146484}
+2025-01-09 11:59:53,240 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 11:59:53,250 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 11:59:53,252 - sqlalchemy.engine.Engine - INFO - [generated in 0.00238s] ('string',)
+2025-01-09 11:59:53,277 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\FastApi Projects\Shopping\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 11:59:53,669 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 11:59:53,671 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.43790173530578613}
+2025-01-09 12:00:33,160 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:00:33,163 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id IS NULL
+2025-01-09 12:00:33,165 - sqlalchemy.engine.Engine - INFO - [generated in 0.00271s] ()
+2025-01-09 12:00:33,170 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:00:33,172 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.018769264221191406}
+2025-01-09 12:00:54,132 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:00:54,133 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:00:54,134 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:00:54,138 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:00:54,139 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:00:54,142 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:00:54,142 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:00:54,145 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:00:54,146 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:00:54,148 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:01:06,558 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:01:06,559 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:01:06,559 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:01:06,562 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:01:06,563 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:01:06,566 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:01:06,566 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:01:06,569 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:01:06,570 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:01:06,573 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:01:18,237 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:01:18,239 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:01:18,239 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:01:18,242 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:01:18,243 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:01:18,246 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:01:18,247 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:01:18,250 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:01:18,251 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:01:18,274 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:01:18,311 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:01:18,333 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id IS NULL
+2025-01-09 12:01:18,334 - sqlalchemy.engine.Engine - INFO - [generated in 0.00152s] ()
+2025-01-09 12:01:18,338 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:01:18,341 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.03802013397216797}
+2025-01-09 12:01:41,499 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:01:41,500 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id IS NULL
+2025-01-09 12:01:41,502 - sqlalchemy.engine.Engine - INFO - [cached since 23.15s ago] ()
+2025-01-09 12:01:41,506 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:01:41,511 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.016596555709838867}
+2025-01-09 12:01:43,468 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:01:43,469 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:01:43,470 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:01:43,472 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:01:43,473 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:01:43,476 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:01:43,476 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:01:43,479 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:01:43,479 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:01:43,481 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:01:50,206 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:01:50,220 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id IS NULL
+2025-01-09 12:01:50,222 - sqlalchemy.engine.Engine - INFO - [generated in 0.00193s] ()
+2025-01-09 12:01:50,226 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:01:50,230 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.029728412628173828}
+2025-01-09 12:02:06,817 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:02:06,819 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:02:06,820 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:06,823 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:02:06,824 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:06,826 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:02:06,827 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:06,831 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:02:06,832 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:06,836 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:02:07,029 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:02:07,043 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id IS NULL
+2025-01-09 12:02:07,045 - sqlalchemy.engine.Engine - INFO - [generated in 0.00206s] ()
+2025-01-09 12:02:07,049 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:02:07,052 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.029413938522338867}
+2025-01-09 12:02:22,615 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:02:22,616 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:02:22,617 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:22,620 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:02:22,621 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:22,623 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:02:22,624 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:22,626 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:02:22,627 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:22,629 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:02:24,235 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:02:24,250 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id IS NULL
+2025-01-09 12:02:24,252 - sqlalchemy.engine.Engine - INFO - [generated in 0.00189s] ()
+2025-01-09 12:02:24,255 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:02:24,257 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.029718637466430664}
+2025-01-09 12:02:38,207 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:02:38,208 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id IS NULL
+2025-01-09 12:02:38,210 - sqlalchemy.engine.Engine - INFO - [cached since 13.95s ago] ()
+2025-01-09 12:02:38,215 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:02:38,220 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.01792764663696289}
+2025-01-09 12:02:57,275 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:02:57,276 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:02:57,277 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:57,281 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:02:57,282 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:57,284 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:02:57,285 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:57,289 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:02:57,290 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:57,293 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:02:59,015 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:02:59,016 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:02:59,016 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:59,019 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:02:59,020 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:59,024 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:02:59,025 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:59,027 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:02:59,028 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:02:59,030 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:02:59,042 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0008132457733154297}
+2025-01-09 12:02:59,177 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.014814615249633789}
+2025-01-09 12:03:05,718 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:03:05,728 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 12:03:05,730 - sqlalchemy.engine.Engine - INFO - [generated in 0.00200s] ('string',)
+2025-01-09 12:03:05,740 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\FastApi Projects\Shopping\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 12:03:06,161 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:03:06,165 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.45395493507385254}
+2025-01-09 12:03:11,707 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.008000373840332031}
+2025-01-09 12:03:22,615 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.001867532730102539}
+2025-01-09 12:03:35,085 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:03:35,086 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:03:35,087 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:03:35,090 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:03:35,090 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:03:35,094 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:03:35,094 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:03:35,097 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:03:35,097 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:03:35,100 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:03:35,111 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.000682830810546875}
+2025-01-09 12:03:35,226 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.013837575912475586}
+2025-01-09 12:03:40,950 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:03:40,966 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 12:03:40,968 - sqlalchemy.engine.Engine - INFO - [generated in 0.00246s] ('string',)
+2025-01-09 12:03:40,985 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\FastApi Projects\Shopping\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 12:03:41,387 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:03:41,391 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.4503002166748047}
+2025-01-09 12:03:48,574 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:03:48,580 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id IS NULL
+2025-01-09 12:03:48,584 - sqlalchemy.engine.Engine - INFO - [generated in 0.00449s] ()
+2025-01-09 12:03:48,590 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:03:48,595 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.02930140495300293}
+2025-01-09 12:04:11,708 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:04:11,709 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:04:11,710 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:11,713 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:04:11,714 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:11,718 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:04:11,720 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:11,723 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:04:11,725 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:11,729 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:04:15,722 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:04:15,724 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:04:15,725 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:15,728 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:04:15,729 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:15,733 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:04:15,734 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:15,736 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:04:15,737 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:15,740 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:04:34,891 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:04:34,892 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:04:34,893 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:34,896 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:04:34,896 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:34,899 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:04:34,900 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:34,902 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:04:34,902 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:34,905 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:04:36,856 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:04:36,857 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:04:36,858 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:36,861 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:04:36,862 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:36,865 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:04:36,866 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:36,869 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:04:36,870 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:36,874 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:04:38,742 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:04:38,744 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:04:38,745 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:38,748 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:04:38,749 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:38,752 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:04:38,753 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:38,755 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:04:38,756 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:38,758 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:04:41,038 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:04:41,039 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:04:41,040 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:41,043 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:04:41,044 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:41,046 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:04:41,047 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:41,049 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:04:41,050 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:41,053 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:04:47,439 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:04:47,441 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:04:47,442 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:47,446 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:04:47,447 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:47,450 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:04:47,451 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:47,454 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:04:47,455 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:47,459 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:04:52,987 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:04:52,989 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:04:52,989 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:52,992 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:04:52,993 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:52,996 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:04:52,997 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:53,000 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:04:53,001 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:53,004 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:04:56,050 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:04:56,051 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:04:56,052 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:56,055 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:04:56,055 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:56,057 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:04:56,058 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:56,060 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:04:56,060 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:56,063 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:04:57,654 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:04:57,655 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:04:57,655 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:57,658 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:04:57,658 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:57,661 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:04:57,661 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:57,664 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:04:57,664 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:57,667 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:04:59,096 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:04:59,097 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:04:59,097 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:59,100 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:04:59,100 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:59,103 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:04:59,103 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:59,105 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:04:59,106 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:04:59,108 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:05:21,670 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0007455348968505859}
+2025-01-09 12:05:21,820 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.018742084503173828}
+2025-01-09 12:05:27,668 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:05:27,678 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 12:05:27,681 - sqlalchemy.engine.Engine - INFO - [generated in 0.00238s] ('string',)
+2025-01-09 12:05:27,690 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\FastApi Projects\Shopping\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 12:05:28,099 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:05:28,101 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.43951892852783203}
+2025-01-09 12:05:37,178 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:05:37,181 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id = ?
+2025-01-09 12:05:37,183 - sqlalchemy.engine.Engine - INFO - [generated in 0.00263s] (TokenData(user_id=1),)
+2025-01-09 12:05:37,187 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:06:31,022 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:06:31,023 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:06:31,023 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:06:31,026 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:06:31,027 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:06:31,030 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:06:31,030 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:06:31,033 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:06:31,034 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:06:31,037 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:06:35,607 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:06:35,608 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:06:35,609 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:06:35,613 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:06:35,613 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:06:35,616 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:06:35,617 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:06:35,620 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:06:35,621 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:06:35,624 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:07:31,206 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0014333724975585938}
+2025-01-09 12:08:06,016 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:08:06,017 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:08:06,018 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:08:06,022 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:08:06,023 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:08:06,026 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:08:06,027 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:08:06,029 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:08:06,030 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:08:06,033 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:08:06,060 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.014101743698120117}
+2025-01-09 12:08:09,862 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0011096000671386719}
+2025-01-09 12:08:10,058 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.0018451213836669922}
+2025-01-09 12:08:19,012 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:08:19,024 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 12:08:19,027 - sqlalchemy.engine.Engine - INFO - [generated in 0.00261s] ('string',)
+2025-01-09 12:08:19,038 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\FastApi Projects\Shopping\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 12:08:19,432 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:08:19,435 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.4325134754180908}
+2025-01-09 12:08:39,766 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:08:39,767 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:08:39,768 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:08:39,771 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:08:39,772 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:08:39,775 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:08:39,776 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:08:39,779 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:08:39,779 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:08:39,782 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:08:43,789 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:08:43,791 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:08:43,792 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:08:43,795 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:08:43,796 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:08:43,799 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:08:43,800 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:08:43,803 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:08:43,804 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:08:43,808 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:08:49,057 - root - INFO - {'url': URL('http://127.0.0.1:8000/docs'), 'method': 'GET', 'process_time': 0.0016028881072998047}
+2025-01-09 12:08:49,197 - root - INFO - {'url': URL('http://127.0.0.1:8000/openapi.json'), 'method': 'GET', 'process_time': 0.013706684112548828}
+2025-01-09 12:08:54,865 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:08:54,875 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.email = ?
+2025-01-09 12:08:54,876 - sqlalchemy.engine.Engine - INFO - [generated in 0.00159s] ('string',)
+2025-01-09 12:08:54,883 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "D:\FastApi Projects\Shopping\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-01-09 12:08:55,266 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:08:55,270 - root - INFO - {'url': URL('http://127.0.0.1:8000/login'), 'method': 'POST', 'process_time': 0.41072607040405273}
+2025-01-09 12:09:03,711 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:09:03,713 - sqlalchemy.engine.Engine - INFO - SELECT users.id, users.name, users.email, users.password 
+FROM users 
+WHERE users.id = ?
+2025-01-09 12:09:03,716 - sqlalchemy.engine.Engine - INFO - [generated in 0.00215s] (1,)
+2025-01-09 12:09:03,721 - sqlalchemy.engine.Engine - INFO - ROLLBACK
+2025-01-09 12:09:03,727 - root - INFO - {'url': URL('http://127.0.0.1:8000/users'), 'method': 'GET', 'process_time': 0.02121901512145996}
+2025-01-09 12:10:07,962 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:10:07,964 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:10:07,965 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:07,969 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:10:07,970 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:07,973 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:10:07,974 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:07,977 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:10:07,978 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:07,981 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:10:11,617 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:10:11,619 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:10:11,620 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:11,624 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:10:11,625 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:11,628 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:10:11,629 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:11,632 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:10:11,633 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:11,637 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:10:14,762 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:10:14,765 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:10:14,766 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:14,769 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:10:14,770 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:14,773 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:10:14,774 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:14,777 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:10:14,778 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:14,782 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 12:10:16,605 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 12:10:16,606 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 12:10:16,606 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:16,608 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 12:10:16,609 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:16,611 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 12:10:16,611 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:16,613 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 12:10:16,613 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 12:10:16,615 - sqlalchemy.engine.Engine - INFO - COMMIT
