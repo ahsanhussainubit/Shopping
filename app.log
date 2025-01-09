@@ -1890,3 +1890,13 @@ WHERE users.id = ?
 2025-01-09 14:14:36,793 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
 2025-01-09 14:14:36,793 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
 2025-01-09 14:14:36,793 - sqlalchemy.engine.Engine - INFO - COMMIT
+2025-01-09 14:17:58,207 - sqlalchemy.engine.Engine - INFO - BEGIN (implicit)
+2025-01-09 14:17:58,208 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("order_product")
+2025-01-09 14:17:58,208 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 14:17:58,208 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("users")
+2025-01-09 14:17:58,208 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 14:17:58,209 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("products")
+2025-01-09 14:17:58,209 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 14:17:58,209 - sqlalchemy.engine.Engine - INFO - PRAGMA main.table_info("orders")
+2025-01-09 14:17:58,209 - sqlalchemy.engine.Engine - INFO - [raw sql] ()
+2025-01-09 14:17:58,210 - sqlalchemy.engine.Engine - INFO - COMMIT
