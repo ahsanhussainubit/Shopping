@@ -1,11 +1,26 @@
-version: '3.8'
-
+version: "3.8"
 services:
   app:
     build: .
-    ports:
-      - "8000:8000"
     volumes:
       - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
     environment:
-      - ENV_FILE=.env
+      - DATABASE_URL=postgresql+asyncpg://user:password@db/shopping_db
+
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=shopping_db
+    ports:
+      - "5433:5432"
+
+volumes:
+  postgres_data:

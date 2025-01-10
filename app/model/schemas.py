@@ -1,3 +1,4 @@
+from typing import List, Optional
 from pydantic import BaseModel
 
 class User(BaseModel):
@@ -16,39 +17,49 @@ class CreateUser(BaseModel):
 class ShowUser(User):
     id: int
 
-
-class Product(BaseModel):
+# Category Pydantic Models
+class CategoryBase(BaseModel):
     name: str
-    description: str
-    price: float
 
     class Config:
-        orm_mode = True  # Tells Pydantic to read data as an ORM model (SQLAlchemy)
-        from_attributes = True  
+        orm_mode = True
+        from_attributes = True
+
+
+class CreateCategory(CategoryBase):
+    pass
+
+
+class ShowCategoryProduct(CategoryBase):
+    id: int
+    products: List["ShowProduct"] = []  # Nested relationship with products
+
+class ShowCategory(CategoryBase):
+    id: int
+
+
+class Product(BaseModel):
+    title: str
+    description: Optional[str] = None
+    price: float
+    imgUrl: Optional[str] = None
+    productURL: Optional[str] = None
+    stars: float
+    reviews: int
+    listPrice: float
+    isBestSeller: bool
+    boughtInLastMonth: int
+
+    class Config:
+        orm_mode = True
+        from_attributes = True
 
 class ProductCreate(Product):
-    category_id: int
-    pass
+     category_id: int
 
 class ShowProduct(Product):
     id: int
-    category: "ShowCategory"
-
-
-
-
-class Category(BaseModel):
-    name: str
-
-    class Config:
-        orm_mode = True  # Tells Pydantic to read data as an ORM model (SQLAlchemy)
-        from_attributes = True  
-
-class CategoryCreate(Category):
-    pass
-
-class ShowCategory(Category):
-    id: int
+    categories: List[ShowCategory] = []  # Nested relationship with categories
 
 class OrderCreate(BaseModel):
     status: str = "Pending"
