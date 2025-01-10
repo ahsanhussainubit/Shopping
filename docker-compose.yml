@@ -1,11 +1,36 @@
 version: '3.8'
 
 services:
-  app:
+  sqlite:
+    build:
+      context: .  # Ensure this points to where the SQLite Dockerfile is
+    container_name: sqlite
+    volumes:
+      - sqlite_data:/data  # Ensure shared volume for SQLite
+    command: |
+      sh -c "
+      if [ ! -f /data/shopping.db ]; then
+        echo 'Database not found, creating a new one';
+        sqlite3 /data/shopping.db 'CREATE TABLE IF NOT EXISTS example (id INTEGER PRIMARY KEY, name TEXT);'; # Create tables or any setup needed
+      fi
+      while true; do sleep 30; done
+      "
+    restart: always
+
+  fastapi:
     build: .
+    container_name: fastapi-app
     ports:
       - "8000:8000"
     volumes:
       - .:/app
+      - sqlite_data:/data  # Make sure to mount the volume for shared access
     environment:
-      - ENV_FILE=.env
+      - SQLITE_DB_PATH=/data/shopping.db  # Path inside the shared volume
+    depends_on:
+      - sqlite
+    restart: always
+
+volumes:
+  sqlite_data:
+    driver: local  # Local persistent volume for database file
