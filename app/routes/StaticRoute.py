@@ -9,24 +9,8 @@ from ..routes.ProductRoute import get_products
 router = APIRouter(prefix="", tags=["html"])
 
 # Route to serve the HTML file at the root ("/")
-@router.get("/", response_class=HTMLResponse)
-async def get_html(db: AsyncSession = Depends(get_db)):
-    # Get products from the repository
-    products = await get_products(db)
-    
-    # Build product items dynamically
-    product_items = ""
-    for product in products:
-        product_item = f"""
-        <div class="product-item">
-            <img src="{ 'https://via.placeholder.com/200'}" alt="Product Image">
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <p class="price">${product.price}</p>
-        </div>
-        """
-        product_items += product_item
-
+@router.get("/")
+async def get_html():
     # Read the static HTML file from the correct location
     try:
         static_dir = Path(__file__).parent.parent / "static"
@@ -35,8 +19,5 @@ async def get_html(db: AsyncSession = Depends(get_db)):
     except FileNotFoundError:
         return HTMLResponse(content="File not found", status_code=404)
 
-    # Replace the placeholder with the actual product items
-    html_content = html_content.replace("{product_items}", product_items)
-    
     # Return the modified HTML content
     return HTMLResponse(content=html_content, status_code=200)

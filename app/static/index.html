@@ -6,49 +6,166 @@
     <title>Product List</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f1f1f1;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin: 40px 0;
+            color: #2c3e50;
+            font-size: 28px;
         }
         .product-list {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
             padding: 20px;
-            justify-content: center;
+            justify-items: center;
         }
         .product-item {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 200px;
-            padding: 10px;
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 400px;
+        }
+        .product-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
         .product-item img {
             width: 100%;
-            height: 150px;
+            height: 180px;
             object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
         .product-item h3 {
             font-size: 18px;
             margin: 10px 0;
+            color: #2c3e50;
+            font-weight: 600;
+            line-height: 1.3;
+            height: 50px;
+            overflow: hidden;
         }
         .product-item p {
-            color: #555;
+            font-size: 14px;
+            color: #7f8c8d;
             margin: 5px 0;
+            height: 50px;
+            overflow: hidden;
         }
         .product-item .price {
-            color: #e63946;
+            color: #e74c3c;
             font-weight: bold;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        .product-item .stars {
+            margin-top: 10px;
+            color: #f39c12;
+        }
+        .product-item .reviews {
+            font-size: 12px;
+            color: #95a5a6;
+        }
+        .product-item .category {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #34495e;
+            font-weight: 500;
+        }
+        .product-item .btn {
+            margin-top: 20px;
+            padding: 12px 18px;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        .product-item .btn:hover {
+            background-color: #e74c3c;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .product-list {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .product-item {
+                height: auto;
+            }
+        }
+
+        /* Tablet responsiveness */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 26px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1 style="text-align:center;">Product List</h1>
-    <div class="product-list">
-        <!-- Product Placeholder -->
-        {product_items}
+    <h1>Product List</h1>
+    <div class="product-list" id="product-list">
+        <!-- Product items will be inserted here dynamically -->
     </div>
+
+    <script>
+        // Function to fetch and display product data
+        async function fetchProducts() {
+            try {
+                const response = await fetch('http://localhost:8000/products/?page=1&limit=10');
+                const data = await response.json();
+
+                // Grab the container for product items
+                const productList = document.getElementById('product-list');
+
+                // Clear any existing products
+                productList.innerHTML = '';
+
+                // Loop through the product data and create HTML for each product
+                data.forEach(product => {
+                    const productItem = document.createElement('div');
+                    productItem.classList.add('product-item');
+
+                    productItem.innerHTML = `
+                        <img src="${product.img_url}" alt="${product.title}">
+                        <h3>${product.title}</h3>
+                        <p>${product.description || 'No description available'}</p>
+                        <div class="price">$${product.price.toFixed(2)}</div>
+                        <div class="stars">${'⭐'.repeat(Math.floor(product.stars))} ${product.stars}</div>
+                        <div class="reviews">${product.bought_in_last_month} bought in last month</div>
+                        <div class="category">${product.category.name || 'No category available'}</div>
+                        <a href="${product.product_url}" class="btn" target="_blank">View on Amazon</a>
+                    `;
+
+                    // Append the product item to the list
+                    productList.appendChild(productItem);
+                });
+            } catch (error) {
+                console.error('Error fetching product data:', error);
+            }
+        }
+
+        // Call the function to fetch and display products when the page loads
+        window.onload = fetchProducts;
+    </script>
 </body>
 </html>
