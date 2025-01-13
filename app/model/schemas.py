@@ -42,13 +42,13 @@ class Product(BaseModel):
     title: str
     description: Optional[str] = None
     price: float
-    imgUrl: Optional[str] = None
-    productURL: Optional[str] = None
+    img_url: Optional[str] = None
+    product_url: Optional[str] = None
     stars: float
     reviews: int
-    listPrice: float
-    isBestSeller: bool
-    boughtInLastMonth: int
+    list_price: float
+    is_best_seller: bool
+    bought_in_last_month: int
 
     class Config:
         orm_mode = True
@@ -59,7 +59,7 @@ class ProductCreate(Product):
 
 class ShowProduct(Product):
     id: int
-    categories: List[ShowCategory] = []  # Nested relationship with categories
+    category: ShowCategory
 
 class OrderCreate(BaseModel):
     status: str = "Pending"

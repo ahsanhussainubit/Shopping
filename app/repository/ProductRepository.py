@@ -9,56 +9,27 @@ from sqlalchemy.orm import selectinload
 
 
 async def get_product_by_id(product_id: int, db: AsyncSession):
-    result = await db.execute(
-        select(models.Product)
-        .options(selectinload(models.Product.categories))  # Eager load categories
-        .filter(models.Product.id == product_id)
-    )
+    result = await db.execute(select(models.Product).options(selectinload(models.Product.category)).filter(models.Product.id == product_id))
     product = result.scalar()
-    
     if not product:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Product with id {product_id} not found")
+    return ShowProduct(**product.__dict__)
 
-    # Manually map categories to ShowCategory
-    categories = [ShowCategory(id=category.id, name=category.name) for category in product.categories]
-    
-    return ShowProduct(
-        id=product.id,
-        title=product.title,
-        description=product.description,
-        price=product.price,
-        imgUrl=product.imgUrl,
-        productURL=product.productURL,
-        stars=product.stars,
-        reviews=product.reviews,
-        listPrice=product.listPrice,
-        isBestSeller=product.isBestSeller,
-        boughtInLastMonth=product.boughtInLastMonth,
-        categories=categories
-    )
 async def create(product: ProductCreate, db: AsyncSession = Depends(get_db)):
     try:
-        # Fetch the category by category_id from the database asynchronously
-        result = await db.execute(select(models.Category).filter(models.Category.id == product.category_id))
-        category = result.scalar_one_or_none()
-
-        if not category:
-            raise HTTPException(status_code=404, detail="Category not found")
-
         # Create the new product with the correct many-to-many relationship
         new_product = models.Product(
             title=product.title,
             description=product.description,
             price=product.price,
-            imgUrl=product.imgUrl,
-            productURL=product.productURL,
+            img_url=product.img_url,
+            product_url=product.product_url,
             stars=product.stars,
             reviews=product.reviews,
-            listPrice=product.listPrice,
-            isBestSeller=product.isBestSeller,
-            boughtInLastMonth=product.boughtInLastMonth,
-            category_id=category.id,  # Directly set the category_id here
-            categories=[category],  # Bind the fetched category to the product
+            list_price=product.list_price,
+            is_best_seller=product.is_best_seller,
+            bought_in_last_month=product.bought_in_last_month,
+            category_id=product.category_id,  # Directly set the category_id here
         )
 
         # Add the product to the session
@@ -76,32 +47,17 @@ async def create(product: ProductCreate, db: AsyncSession = Depends(get_db)):
         traceback_str = ''.join(traceback.format_exception(None, e, e.__traceback__))
         raise HTTPException(status_code=500, detail=f"Internal Server Error: {traceback_str}")
 
-async def get_products(db: AsyncSession = Depends(get_db)):
-    # Use selectinload to eagerly load categories
+
+async def get_products(page: int = 1, limit: int = 10, db: AsyncSession = Depends(get_db)):
+    # Use selectinload to eagerly load categories and apply pagination
     result = await db.execute(
         select(models.Product)
-        .options(selectinload(models.Product.categories))  # Eagerly load categories
+        .order_by(models.Product.id)
+        .options(selectinload(models.Product.category))
+        .offset((page - 1) * limit)
+        .limit(limit)
     )
     products = result.scalars().all()
 
     # Map the products and include categories
-    return [
-        ShowProduct(
-            id=product.id,
-            title=product.title,
-            description=product.description,
-            price=product.price,
-            imgUrl=product.imgUrl,
-            productURL=product.productURL,
-            stars=product.stars,
-            reviews=product.reviews,
-            listPrice=product.listPrice,
-            isBestSeller=product.isBestSeller,
-            boughtInLastMonth=product.boughtInLastMonth,
-            categories=[
-                ShowCategory(id=category.id, name=category.name)
-                for category in product.categories
-            ]
-        )
-        for product in products
-    ]
+    return [ShowProduct(**product.__dict__) for product in products]
