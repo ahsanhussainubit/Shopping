@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1e0b95b3-06a6-4463-9d61-fac6a7c1ad55" name="Changes" comment="add product code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repository/ProductRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/ProductRepository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/ProductRoute.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/ProductRoute.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/StaticRoute.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/StaticRoute.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +45,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "____new__docker",
-    "last_opened_file_path": "/Users/owaisraza/Documents/FastApi Projects/Shopping",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;____new__docker&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/owaisraza/Documents/FastApi Projects/Shopping&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

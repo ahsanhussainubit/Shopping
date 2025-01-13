@@ -4,7 +4,7 @@ from ..database import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import Depends, HTTPException, status
 from ..model import models
-from sqlalchemy import select
+from sqlalchemy import select, func
 from sqlalchemy.orm import selectinload
 
 
@@ -47,17 +47,14 @@ async def create(product: ProductCreate, db: AsyncSession = Depends(get_db)):
         traceback_str = ''.join(traceback.format_exception(None, e, e.__traceback__))
         raise HTTPException(status_code=500, detail=f"Internal Server Error: {traceback_str}")
 
-
-async def get_products(page: int = 1, limit: int = 10, db: AsyncSession = Depends(get_db)):
-    # Use selectinload to eagerly load categories and apply pagination
-    result = await db.execute(
+async def get_products(keyword: str = "", page: int = 1, limit: int = 10, db: AsyncSession = Depends(get_db)):
+    query = (
         select(models.Product)
-        .order_by(models.Product.id)
         .options(selectinload(models.Product.category))
+        .filter(func.lower(models.Product.title).like(f"%{keyword.lower()}%") if keyword else True)
+        .order_by(models.Product.id)
         .offset((page - 1) * limit)
         .limit(limit)
     )
-    products = result.scalars().all()
-
-    # Map the products and include categories
-    return [ShowProduct(**product.__dict__) for product in products]
+    result = await db.execute(query)
+    return [ShowProduct(**p.__dict__) for p in result.scalars().all()]
