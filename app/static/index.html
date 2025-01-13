@@ -3,144 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product List</title>
+    <title>ShopEasy - Your Product Store</title>
     <style>
+        /* General styling */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f1f1f1;
-            color: #333;
+            background-color: #F8F9F9;
+            color: #2C3E50;
         }
-        h1 {
-            text-align: center;
-            margin: 40px 0;
-            color: #2c3e50;
+        header {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
             font-size: 28px;
+            font-weight: bold;
+        }
+        .search-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+            padding: 0 40px;
+        }
+        .search-input {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+            border-radius: 8px;
+            border: 1px solid #BDC3C7;
+            margin-right: 10px;
+        }
+        .search-btn {
+            padding: 10px 20px;
+            background-color: #E67E22;
+            color: white;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .search-btn:hover {
+            background-color: #D35400;
         }
         .product-list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            justify-items: center;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
         }
         .product-item {
             background-color: white;
             border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s ease-in-out;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 400px;
+            padding: 20px;
+            position: relative;
         }
         .product-item:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
         .product-item img {
             width: 100%;
-            height: 180px;
+            height: 240px;
             object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            border-radius: 12px;
         }
         .product-item h3 {
-            font-size: 18px;
-            margin: 10px 0;
-            color: #2c3e50;
-            font-weight: 600;
-            line-height: 1.3;
-            height: 50px;
-            overflow: hidden;
-        }
-        .product-item p {
-            font-size: 14px;
-            color: #7f8c8d;
-            margin: 5px 0;
-            height: 50px;
-            overflow: hidden;
-        }
-        .product-item .price {
-            color: #e74c3c;
+            font-size: 20px;
+            color: #34495E;
+            margin: 15px 0;
             font-weight: bold;
+        }
+        .price {
+            font-size: 22px;
+            color: #E67E22;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .stars {
+            color: #F39C12;
+            font-size: 18px;
+            margin: 5px 0;
+        }
+        .reviews {
             font-size: 16px;
+            color: #7F8C8D;
+        }
+        .list-price {
+            font-size: 16px;
+            color: #95A5A6;
+            text-decoration: line-through;
+            margin-top: 5px;
+        }
+        .btn {
+            padding: 12px 25px;
+            background-color: #E67E22;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+            display: inline-block;
             margin-top: 15px;
         }
-        .product-item .stars {
-            margin-top: 10px;
-            color: #f39c12;
+        .btn:hover {
+            background-color: #D35400;
         }
-        .product-item .reviews {
-            font-size: 12px;
-            color: #95a5a6;
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
         }
-        .product-item .category {
-            margin-top: 15px;
-            font-size: 13px;
-            color: #34495e;
-            font-weight: 500;
+        .modal-content {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
         }
-        .product-item .btn {
-            margin-top: 20px;
-            padding: 12px 18px;
-            background-color: #ff5733;
+        .modal-content img {
+            width: 100%;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+        .modal-content h2 {
+            margin: 20px 0 10px;
+            font-size: 26px;
+            font-weight: bold;
+            color: #2C3E50;
+        }
+        .modal-content p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #34495E;
+        }
+        .modal-content .close {
+            background-color: #E74C3C;
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 30px;
+            padding: 12px 25px;
             cursor: pointer;
-            text-decoration: none;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
+            font-size: 16px;
+            margin-top: 20px;
         }
-        .product-item .btn:hover {
-            background-color: #e74c3c;
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .product-list {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            }
-            h1 {
-                font-size: 24px;
-            }
-            .product-item {
-                height: auto;
-            }
-        }
-
-        /* Tablet responsiveness */
-        @media (max-width: 1024px) {
-            h1 {
-                font-size: 26px;
-            }
+        .modal-content .close:hover {
+            background-color: #C0392B;
         }
     </style>
 </head>
 <body>
-    <h1>Product List</h1>
+    <header>
+        <h1>ShopEasy</h1>
+    </header>
+    
+    <div class="search-container">
+        <input type="text" id="search-input" class="search-input" placeholder="Search for products...">
+    </div>
+    
     <div class="product-list" id="product-list">
-        <!-- Product items will be inserted here dynamically -->
+        <!-- Product items will be dynamically inserted -->
+    </div>
+
+    <!-- Modal for product details -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Product Image">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p><strong>Price:</strong> $<span id="modal-price"></span></p>
+            <p><strong>Stars:</strong> <span id="modal-stars"></span></p>
+            <p><strong>Reviews:</strong> <span id="modal-reviews"></span></p>
+            <p><strong>List Price:</strong> $<span id="modal-list-price"></span></p>
+            <p><strong>Bought in Last Month:</strong> <span id="modal-bought"></span></p>
+            <a id="modal-product-link" href="#" target="_blank" class="btn">View on Amazon</a>
+            <button class="close" onclick="closeModal()">Close</button>
+        </div>
     </div>
 
     <script>
-        // Function to fetch and display product data
-        async function fetchProducts() {
+        async function fetchProducts(keyword = '') {
             try {
-                const response = await fetch('http://localhost:8000/products/?page=1&limit=10');
+                const response = await fetch(`http://localhost:8000/products/?keyword=${keyword}&page=1&limit=10`);
                 const data = await response.json();
 
-                // Grab the container for product items
                 const productList = document.getElementById('product-list');
-
-                // Clear any existing products
                 productList.innerHTML = '';
 
-                // Loop through the product data and create HTML for each product
+                if (data.length === 0) {
+                    productList.innerHTML = '<p>No products found for this search.</p>';
+                    return;
+                }
+
                 data.forEach(product => {
                     const productItem = document.createElement('div');
                     productItem.classList.add('product-item');
@@ -148,15 +226,12 @@
                     productItem.innerHTML = `
                         <img src="${product.img_url}" alt="${product.title}">
                         <h3>${product.title}</h3>
-                        <p>${product.description || 'No description available'}</p>
                         <div class="price">$${product.price.toFixed(2)}</div>
-                        <div class="stars">${'⭐'.repeat(Math.floor(product.stars))} ${product.stars}</div>
-                        <div class="reviews">${product.bought_in_last_month} bought in last month</div>
-                        <div class="category">${product.category.name || 'No category available'}</div>
-                        <a href="${product.product_url}" class="btn" target="_blank">View on Amazon</a>
+                        <div class="stars">${'★'.repeat(Math.round(product.stars))}</div>
+                        <div class="reviews">${product.reviews > 0 ? `${product.reviews} Reviews` : 'No reviews'}</div>
+                        <div class="list-price">${product.list_price > 0 ? `$${product.list_price.toFixed(2)}` : 'N/A'}</div>
+                        <button class="btn" onclick="viewDetails(${JSON.stringify(product).replace(/"/g, '&quot;')})">View Details</button>
                     `;
-
-                    // Append the product item to the list
                     productList.appendChild(productItem);
                 });
             } catch (error) {
@@ -164,8 +239,34 @@
             }
         }
 
-        // Call the function to fetch and display products when the page loads
-        window.onload = fetchProducts;
+        function searchProducts() {
+            const keyword = document.getElementById('search-input').value;
+            fetchProducts(keyword);
+        }
+
+        function viewDetails(product) {
+            document.getElementById('modal-img').src = product.img_url;
+            document.getElementById('modal-title').innerText = product.title;
+            document.getElementById('modal-description').innerText = product.description || 'No description available';
+            document.getElementById('modal-price').innerText = product.price.toFixed(2);
+            document.getElementById('modal-stars').innerText = product.stars;
+            document.getElementById('modal-reviews').innerText = product.reviews || 'No reviews';
+            document.getElementById('modal-list-price').innerText = product.list_price.toFixed(2) || 'N/A';
+            document.getElementById('modal-bought').innerText = product.bought_in_last_month || 'N/A';
+            document.getElementById('modal-product-link').href = product.amazon_link;
+
+            document.getElementById('product-modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('product-modal').style.display = 'none';
+        }
+
+        // Attach input event to search input field
+        document.getElementById('search-input').addEventListener('input', searchProducts);
+
+        // Initial fetch without keyword
+        fetchProducts();
     </script>
 </body>
 </html>

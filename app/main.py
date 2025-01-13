@@ -7,8 +7,18 @@ from app.model import models
 import asyncio
 import nest_asyncio
 from app.logs.middleware import AdvancedMiddleware
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI(title="Shopping App",version="v1")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 app.include_router(AuthenticationRoute.router)
 app.include_router(UserRoute.router)
 app.include_router(OrderRoute.router)
