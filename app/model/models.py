@@ -1,5 +1,5 @@
 # Ensure the association tables are declared before the models
-from sqlalchemy import Column, Integer, String, Float, Table, Boolean, ForeignKey
+from sqlalchemy import Column, Integer, String, Float, Table, Boolean, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
 from ..database import Base
 
@@ -69,3 +69,13 @@ class Order(Base):
 
     # Many-to-Many relationship with products
     products = relationship("Product", secondary=order_product_association, back_populates="orders")
+
+
+class RefreshToken(Base):
+    __tablename__ = "refresh_tokens"
+
+    id = Column(Integer, primary_key=True, index=True)
+    token = Column(String, unique=True, nullable=False)
+    user_id = Column(Integer, nullable=False)
+    expires_at = Column(DateTime, nullable=False)
+    is_valid = Column(Boolean, default=True)  # To handle revocation

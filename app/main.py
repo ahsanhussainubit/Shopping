@@ -1,14 +1,12 @@
 import asyncio
+
+import nest_asyncio
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 
-from app.routes import OrderRoute, AuthenticationRoute, UserRoute, ProductRoute, CategoryRoute,StaticRoute
 from app.database import engine
-from app.model.models import Base
 from app.model import models
-import asyncio
-import nest_asyncio
-from app.logs.middleware import AdvancedMiddleware
+from app.routes import OrderRoute, AuthenticationRoute, UserRoute, ProductRoute, CategoryRoute, StaticRoute
 
 app = FastAPI(title="Shopping App",version="v1")
 app.include_router(AuthenticationRoute.router)

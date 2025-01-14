@@ -36,25 +36,26 @@ PROVIDERS = {
 }
 
 
-async def login(request: OAuth2PasswordRequestForm, db: AsyncSession = Depends(get_db)):
-    result = await db.execute(select(models.User).filter(models.User.email == request.username))
-    user = result.scalar()
-    if not user:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND, 
-            detail=f"User with email {request.username} not found"
-        )
-    if not Hash.verify(request.password, user.sub):
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED, 
-            detail="Invalid password"
-        )
-
-    # Generate an access token
-    access_token = token.create_access_token(data={"sub": str(user.id)})
-
-    # Return the token response as a dictionary
-    return {"access_token": access_token, "token_type": "bearer"}
+# async def login(request: OAuth2PasswordRequestForm, db: AsyncSession = Depends(get_db)):
+#     result = await db.execute(select(models.User).filter(models.User.email == request.username))
+#     user = result.scalar()
+#     if not user:
+#         raise HTTPException(
+#             status_code=status.HTTP_404_NOT_FOUND,
+#             detail=f"User with email {request.username} not found"
+#         )
+#     if not Hash.verify(request.password, user.sub):
+#         raise HTTPException(
+#             status_code=status.HTTP_401_UNAUTHORIZED,
+#             detail="Invalid password"
+#         )
+#
+#     # Generate an access token
+#     access_token = token.create_access_token(data={"sub": str(user.id)})
+#     refresh_token = token.create_refresh_token(user.id,db)
+#
+#     # Return the token response as a dictionary
+#     return {"access_token": access_token,"refresh_token": refresh_token, "token_type": "bearer"}
 
 
 async def authenticate_user(request: AuthRequest,db: AsyncSession = Depends(get_db)):
@@ -75,10 +76,27 @@ async def authenticate_user(request: AuthRequest,db: AsyncSession = Depends(get_
         # Create an access token using user identifier (`sub`)
         access_token = token.create_access_token(data={"sub": response.sub})
 
-        return {"access_token": access_token, "token_type": "bearer"}
+        refresh_token = await token.create_refresh_token(user.id,db)
+
+        # Return the token response as a dictionary
+        return {"access_token": access_token, "refresh_token": refresh_token, "token_type": "bearer"}
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+async def refresh_token(refresh_token: str, db: AsyncSession = Depends(get_db)):
+    try:
+        user_id = await token.verify_refresh_token(refresh_token,db)
+        new_access_token = token.create_access_token(data={"sub": user_id})
+        new_refresh_token = await token.create_refresh_token(user_id,db)
+        return {
+            "access_token": new_access_token,
+            "refresh_token": new_refresh_token,
+            "token_type": "bearer",
+        }
+    except HTTPException as e:
+        raise e
 
 
 async def validate_google_token(token: str):
