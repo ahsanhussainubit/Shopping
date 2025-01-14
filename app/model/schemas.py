@@ -4,6 +4,8 @@ from pydantic import BaseModel
 class User(BaseModel):
     name: str
     email: str
+    sub: str
+    network : str
 
     class Config:
         orm_mode = True
@@ -12,7 +14,8 @@ class User(BaseModel):
 class CreateUser(BaseModel):
     name: str
     email: str
-    password: str
+    sub: str
+    network : str
 
 class ShowUser(User):
     id: int

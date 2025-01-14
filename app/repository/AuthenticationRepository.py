@@ -7,14 +7,17 @@ from fastapi.security import OAuth2PasswordRequestForm
 import jwt
 import requests
 from google.oauth2 import id_token
+
+from .UserRepository import get_user_by_sub
 from ..auth import token
 from ..auth.hashing import Hash
 from ..model import models
 from ..database import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
-from ..model.schemas import AuthRequest
+from ..model.schemas import AuthRequest, User, CreateUser
 from ..model.settings import settings
+from ..routes.UserRoute import create_user
 
 # Configuration for providers
 PROVIDERS = {
@@ -41,7 +44,7 @@ async def login(request: OAuth2PasswordRequestForm, db: AsyncSession = Depends(g
             status_code=status.HTTP_404_NOT_FOUND, 
             detail=f"User with email {request.username} not found"
         )
-    if not Hash.verify(request.password, user.password):
+    if not Hash.verify(request.password, user.sub):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED, 
             detail="Invalid password"
@@ -54,16 +57,26 @@ async def login(request: OAuth2PasswordRequestForm, db: AsyncSession = Depends(g
     return {"access_token": access_token, "token_type": "bearer"}
 
 
-async def authenticate_user(request: AuthRequest):
+async def authenticate_user(request: AuthRequest,db: AsyncSession = Depends(get_db)):
     """
     Generic function to authenticate users using any provider.
     """
     try:
         validate_fn = globals()[f"validate_{request.network}_token"]
-        response = await validate_fn(request.token)
-        print(response)
-        access_token = token.create_access_token(data={"sub": response})
+        response : User = await validate_fn(request.token)
+
+        # Check if the user already exists in the database
+        user = await get_user_by_sub(response.sub,db)
+
+        if not user:
+            # If user doesn't exist, create a new user (signup)
+            user = await create_user(CreateUser(name=response.name, email=response.email, sub=response.sub,network=request.network),db)
+
+        # Create an access token using user identifier (`sub`)
+        access_token = token.create_access_token(data={"sub": response.sub})
+
         return {"access_token": access_token, "token_type": "bearer"}
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -78,7 +91,7 @@ async def validate_google_token(token: str):
         # Verify the token using Google's library
         id_info = id_token.verify_oauth2_token(token, requests.Request(), client_id)
 
-        return id_info.get("sub")
+        return User(sub=id_info["sub"], network="google", email=id_info["email"], name=id_info["email"].split("@")[0])
     except ValueError as e:
         raise HTTPException(status_code=400, detail=f"Invalid Google token: {str(e)}")
 
@@ -106,7 +119,7 @@ async def validate_facebook_token(token: str):
             )
 
         # Successfully retrieved user info
-        return user_info['id']
+        return User(sub=user_info['id'], network="facebook", email=user_info['email'], name=user_info["email"].split("@")[0])
 
     except Exception as e:
         raise HTTPException(
@@ -139,6 +152,6 @@ async def validate_apple_token(id_token: str):
         payload = jwt.decode(id_token, rsa_public_key, algorithms=["RS256"], audience=PROVIDERS["apple"]["client_id"])
 
         # Return the decoded payload (user information)
-        return payload['sub']
+        return User(sub=payload["sub"], network="apple", email=payload["email"], name=payload["email"].split("@")[0])
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Unexpected error: {str(e)}")
