@@ -15,3 +15,7 @@ greenlet
 psycopg2-binary
 databases
 asyncpg
+google-auth
+requests
+pyjwt
+cryptography

@@ -86,3 +86,8 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     user_id: int | None = None
+
+
+class AuthRequest(BaseModel):
+    token: str
+    network: str

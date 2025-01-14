@@ -52,6 +52,7 @@ async def get_products(keyword: str = "", page: int = 1, limit: int = 10, db: As
         select(models.Product)
         .options(selectinload(models.Product.category))
         .filter(func.lower(models.Product.title).like(f"%{keyword.lower()}%") if keyword else True)
+        # .filter(models.Product.category_id == 104)
         .order_by(models.Product.id)
         .offset((page - 1) * limit)
         .limit(limit)
