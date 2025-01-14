@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e0b95b3-06a6-4463-9d61-fac6a7c1ad55" name="Changes" comment="move .env to local">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="1e0b95b3-06a6-4463-9d61-fac6a7c1ad55" name="Changes" comment="refresh token work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/auth/token.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/auth/token.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/repository/AuthenticationRepository.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repository/AuthenticationRepository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/AuthenticationRoute.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/AuthenticationRoute.py" afterDir="false" />
     </list>
@@ -128,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736850488103</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refresh token work">
+      <option name="closed" value="true" />
+      <created>1736863627298</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1736863627298</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +152,7 @@
     <MESSAGE value="social login and signup" />
     <MESSAGE value="social login and signup ." />
     <MESSAGE value="move .env to local" />
-    <option name="LAST_COMMIT_MESSAGE" value="move .env to local" />
+    <MESSAGE value="refresh token work" />
+    <option name="LAST_COMMIT_MESSAGE" value="refresh token work" />
   </component>
 </project>

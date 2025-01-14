@@ -2,6 +2,8 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordRequestForm
+
+from ..auth.oauth2 import get_current_user
 from ..model.schemas import AuthRequest
 from ..repository import AuthenticationRepository
 from ..model import schemas
@@ -22,3 +24,7 @@ async def authenticate_user(request: AuthRequest,db: AsyncSession = Depends(get_
 @router.post("/refresh")
 async def refresh_token(refresh_token: str, db: AsyncSession = Depends(get_db)):
     return await AuthenticationRepository.refresh_token(refresh_token,db)
+
+@router.post("/logout")
+async def logout(current_user_id: int = Depends(get_current_user), db: AsyncSession = Depends(get_db)):
+    return await AuthenticationRepository.logout(current_user_id,db)

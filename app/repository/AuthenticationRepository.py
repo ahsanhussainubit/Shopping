@@ -1,20 +1,16 @@
 import base64
 
-from cryptography.hazmat.backends import default_backend
-from cryptography.hazmat.primitives.asymmetric import rsa
-from fastapi import Depends, HTTPException, status
-from fastapi.security import OAuth2PasswordRequestForm
 import jwt
 import requests
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives.asymmetric import rsa
+from fastapi import Depends, HTTPException
 from google.oauth2 import id_token
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from .UserRepository import get_user_by_sub
 from ..auth import token
-from ..auth.hashing import Hash
-from ..model import models
 from ..database import get_db
-from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select
 from ..model.schemas import AuthRequest, User, CreateUser
 from ..model.settings import settings
 from ..routes.UserRoute import create_user
@@ -74,7 +70,7 @@ async def authenticate_user(request: AuthRequest,db: AsyncSession = Depends(get_
             user = await create_user(CreateUser(name=response.name, email=response.email, sub=response.sub,network=request.network),db)
 
         # Create an access token using user identifier (`sub`)
-        access_token = token.create_access_token(data={"sub": response.sub})
+        access_token = token.create_access_token(data={"sub": str(user.id)})
 
         refresh_token = await token.create_refresh_token(user.id,db)
 
@@ -88,7 +84,7 @@ async def authenticate_user(request: AuthRequest,db: AsyncSession = Depends(get_
 async def refresh_token(refresh_token: str, db: AsyncSession = Depends(get_db)):
     try:
         user_id = await token.verify_refresh_token(refresh_token,db)
-        new_access_token = token.create_access_token(data={"sub": user_id})
+        new_access_token = token.create_access_token(data={"sub": str(user_id)})
         new_refresh_token = await token.create_refresh_token(user_id,db)
         return {
             "access_token": new_access_token,
@@ -97,6 +93,13 @@ async def refresh_token(refresh_token: str, db: AsyncSession = Depends(get_db)):
         }
     except HTTPException as e:
         raise e
+
+async def logout(user_id: int, db: AsyncSession = Depends(get_db)):
+    try:
+        await token.revoke_refresh_token(user_id=user_id,db=db)
+        return {"message": "Successfully logged out"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 async def validate_google_token(token: str):
@@ -172,4 +175,4 @@ async def validate_apple_token(id_token: str):
         # Return the decoded payload (user information)
         return User(sub=payload["sub"], network="apple", email=payload["email"], name=payload["email"].split("@")[0])
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Unexpected error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Unexpected error on Apple: {str(e)}")

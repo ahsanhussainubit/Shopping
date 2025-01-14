@@ -84,7 +84,7 @@ async def validate_refresh_token(refresh_token: str,db: AsyncSession = Depends(g
         # Check expiration
         if token_data.expires_at < datetime.now(timezone.utc).replace(tzinfo=None):
             # Remove the expired token
-            await revoke_refresh_token(refresh_token, db)
+            await revoke_refresh_token(refresh_token=refresh_token,db= db)
             raise HTTPException(
                 status_code=status.HTTP_404_NOT_FOUND,
                 detail="Refresh token expired"
@@ -96,14 +96,31 @@ async def validate_refresh_token(refresh_token: str,db: AsyncSession = Depends(g
             detail="Invalid refresh token"
         )
 
-async def revoke_refresh_token(refresh_token: str,db: AsyncSession = Depends(get_db)):
+async def revoke_refresh_token(refresh_token: str = None,user_id:int = None,db: AsyncSession = Depends(get_db)):
     """
     Revoke a refresh token by removing it from the database.
     """
-    query = select(RefreshToken).where(RefreshToken.token == refresh_token)
+    query = select(RefreshToken)
+
+    if user_id:
+        query = query.where(RefreshToken.user_id == user_id)
+    elif refresh_token:
+        query = query.where(RefreshToken.token == refresh_token)
+    else:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="At least one of refresh_token or user_id should be provided"
+        )
+
     result = await db.execute(query)
-    token_data = result.scalar_one_or_none()
+    token_data = result.scalars().all()  # Get all matching tokens
 
     if token_data:
-        await db.delete(token_data)
+        # Revoke all tokens associated with the user
+        for token in token_data:
+            await db.delete(token)
         await db.commit()
+        return {"msg": "All refresh tokens revoked successfully"}
+
+    # If no token data is found
+    raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Refresh token(s) not found")
