@@ -48,7 +48,7 @@ async def create(product: ProductCreate, db: AsyncSession = Depends(get_db)):
         # Capture detailed error for debugging
         traceback_str = ''.join(traceback.format_exception(None, e, e.__traceback__))
         raise HTTPException(status_code=500, detail=f"Internal Server Error: {traceback_str}")
-
+    
 async def get_products(
     keyword: str = "", 
     page: int = 1, 
@@ -60,19 +60,19 @@ async def get_products(
     query = select(models.Product).options(selectinload(models.Product.category))
     
     # Add filters
-    if keyword:
+    if keyword.strip():  # Apply keyword filter only if it's not empty
         query = query.filter(func.lower(models.Product.title).like(f"%{keyword.lower()}%"))
-    if category_id:
+    if category_id is not None:  # Apply category filter only if it's provided
         query = query.filter(models.Product.category_id == category_id)
     
-    # Count total number of matching products
+    # Count total products
     count_query = query.with_only_columns(func.count()).scalar_subquery()
     total_products = (await db.execute(select(count_query))).scalar()
     
     # Calculate total pages
     total_pages = ceil(total_products / limit) if total_products else 1
-    
-    # Paginated query
+
+    # Apply pagination
     query = (
         query.order_by(models.Product.id)
         .offset((page - 1) * limit)
@@ -80,9 +80,20 @@ async def get_products(
     )
     result = await db.execute(query)
     products = result.scalars().all()
-    
-    # Response
+
+    # Map products to ShowProduct model
+    product_list = []
+    for p in products:
+        product_data = p.__dict__.copy()
+        # Manually handle category field
+        product_data["category"] = p.category
+        product_list.append(ShowProduct(**product_data))
+
+    # Return response
     return {
-        "products": [ShowProduct(**p.__dict__) for p in products],
-        "total_pages": total_pages
+        "products": product_list,
+        "total_pages": total_pages,
+        "total_products": total_products,
+        "current_page": page,
     }
+
