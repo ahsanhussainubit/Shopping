@@ -19,3 +19,5 @@ google-auth
 requests
 pyjwt
 cryptography
+aioredis
+redlock-py
