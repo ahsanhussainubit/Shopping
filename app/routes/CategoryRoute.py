@@ -1,4 +1,6 @@
-from fastapi import APIRouter, Depends
+import time
+
+from fastapi import APIRouter, Depends, BackgroundTasks
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.database import get_db
 from app.repository import CategoryRepository
@@ -10,6 +12,8 @@ router = APIRouter(
     # dependencies=[Depends(get_current_user)]  # Uncomment if authentication is needed
 )
 
+def print_statement(msg:str):
+    print("Category Repository",msg,flush=True) # flush=True to force print to show up in logs
 
 @router.get("/{category_id}")
 async def get_category_by_id(category_id: int, db: AsyncSession = Depends(get_db)):
@@ -18,8 +22,10 @@ async def get_category_by_id(category_id: int, db: AsyncSession = Depends(get_db
 
 @router.get("/")
 async def get_categories(
+    background_tasks: BackgroundTasks,
     db: AsyncSession = Depends(get_db),
 ):
+    background_tasks.add_task(print_statement, "Getting all categories")
     return await CategoryRepository.get_categories(db)
 
 
